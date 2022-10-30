@@ -1,0 +1,285 @@
+
+* {box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	
+/* layout */
+body{
+	margin: 0;
+	min-height: 100vh;
+	display:flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+
+.accounttitle{
+    margin: 0px 20px 0px;
+}
+
+.accounttitle h1{
+    font-weight:normal;
+}
+
+.accountpage{
+	display: flex;
+	/* background-color: rgba(210, 220, 230, 0.24); */
+	/* gap: 20px; */
+	padding: 20px;
+	margin: 30px; 
+	flex-direction: column;
+	height: 100%;
+	/* align-items: center; */
+}
+
+.content{
+    display: flex;
+    height: 100%;
+    gap: 40px;
+}
+
+.sidebuttons{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px;
+    align-items: flex-start;
+}
+
+.buttonone, .buttonrest{
+    display: flex;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    width: 250px;
+}
+
+.sidebuttons button{
+    padding: 0;
+    border: none;
+    background: none;
+    text-align: start;
+    font-size: 16px;
+    font-weight: bold;
+    color:rgb(73, 187, 203, 0.9);
+}
+
+.sidebuttons a{
+    width: 100%;
+}
+
+#dashboardbut{
+    color: rgba(0,0,0,0.8);
+    padding: 30px 0px 30px;
+}
+
+#dashboardiconone{
+    color: rgba(0,0,0,0.8);
+}
+
+.buttonone{
+    border-top: 1px solid rgba(0,0,0,0.15);
+}
+
+.buttonrest{
+    padding: 10px 0px 30px;
+}
+
+
+/* .sidebuttons button:hover{
+    color: rgba(0,0,0,0.8);
+} */
+
+.innercontent{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 20px 20px;
+}
+
+.dashboard{
+    display: block;
+    width: 100%;
+    height: 50vh;
+    /* width: 900px; */
+    /* border: 2px solid red; */
+}
+
+.dashboard p{
+    margin: 0px;
+    margin-bottom: 30px;
+}
+
+.accountdetails form p{
+    margin: 0px;
+    margin-top: 20px;
+}
+
+.orders, .accountdetails form, .accountdetails{
+    display: none;
+    width: 800px;
+}
+
+.accountBookingTable{
+    width: 100%;
+    background-color: rgba(210, 220, 230, 0.24);
+    align-items: center;
+}
+
+.accountBookingTable th{
+    background-color: rgba(210, 220, 230, 0.308);
+    height: 55px;
+}
+
+.accountBookingTable tr{
+    height: 55px;
+}
+.accountBookingTable td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+#ordernum{
+    color: rgb(73, 187, 203, 0.9);
+    font-weight: bold;
+}
+
+.accountdetails{
+    display: flex;
+    flex-direction: column;
+}
+
+.titleuser{
+    display: flex;
+    flex-direction:column;
+}
+
+.firstandlast{
+    display: flex;
+    gap: 25px;
+}
+
+.first, .last{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.email{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+}
+
+.userandpass{
+    display: flex;
+    gap: 25px;
+}
+
+.user{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.pass{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.form input{
+    height: 50px;
+}
+
+.ptag{
+    margin: 0px;
+}
+
+.ptag2{
+    margin: 0px;
+    margin-top: 15px;
+}
+
+@media (max-width: 1250px)
+{
+    .accountdetails form{
+        width: 100%;
+    }
+    .accountdetails{
+        width: 100%;
+    }
+    .orders{
+        width: 100%;
+    }
+}
+
+@media (max-width: 1050px)
+{
+    .content{
+        gap: 20px;
+        height: 40%;
+    }
+    .sidebuttons {
+        flex-direction: row;
+        width: 100%;
+        height: 15%;
+    }
+    .buttonone, .buttonrest{
+        width: 200px;
+        height: 60%;
+    }
+    .accountpage{
+        margin-left: 0px;
+    }
+    .content{
+        flex-direction: column;
+        margin-left: 0px;
+    }
+    .buttonone{
+        height: 65px;
+        border-top: 0px;
+        padding-bottom: 16px;;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .sidebuttons button{
+        font-size: smaller;
+    }
+}
+
+@media (max-width: 500px)
+{
+    .sidebuttons{
+        margin: 5px;
+    }
+    .sidebuttons button{
+        font-size:x-small;
+    }
+}
+
+@media (max-width: 460px)
+{
+    .sidebuttons{
+        margin: 0px;
+    }
+    .orders td, .orders tr{
+        font-size: 15px;
+    }
+    .sidebuttons button{
+        font-size:xx-small;
+    }
+    .innercontent{
+        margin: 0px 0px 0px;
+    }
+    .orders td, .orders tr {
+        font-size: 14px;
+    }
+}

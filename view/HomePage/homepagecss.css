@@ -1,0 +1,575 @@
+/* promotions */
+.promotions{
+     position: relative;
+     overflow: hidden;  
+     z-index: -1;
+ }
+
+ #map{
+    width: 100%;
+    height: 100%;
+    border: 2px solid #001;
+   }
+   
+
+ .image1{
+     width: 100%; 
+     object-fit:cover;
+     object-position: center;
+
+ } 
+
+
+ .container{
+     width: 400vw;
+     border: none;
+     outline: none;
+     overflow: hidden;
+     display: flex;
+     transform:translateX(var(--pos));
+     align-items: center;
+  /*   height: 55vh; */
+     transition: transform .3s;
+ }
+
+
+
+ .prev, .next {
+  /*   cursor: pointer; */
+     position: absolute; 
+     top: 50%;
+     width: auto;
+     margin-top: -22px;
+     padding: 10px;
+     color: black;
+     font-weight: bold;
+     font-size: 18px;
+     transition: 0.6s ease;
+     border-radius: 0 3px 3px 0;
+     user-select: none;
+     
+   }
+
+ .next{
+     
+     background: rgba(0,0,0,0.35);
+     color: white;
+     right: 0;
+     margin-right: 40px;
+
+ }
+
+ .prev{
+     background: rgba(0,0,0,0.35);
+     color: white;
+     margin-left: 40px;
+ }
+
+ .next:hover, .prev:hover{
+     background-color: rgb(39, 39, 39);
+     color: white;
+ }
+
+ /* search bar - events/retals/map */
+
+
+ .searchCarAndRental{
+    display: flex;
+    padding: 35px 30px 23px;
+}
+
+.RentalandEvents {
+    background: #272727; 
+    border: 2px solid black;
+    opacity: 0.98; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 60%;
+    height: 300px;
+    gap:0px;
+  }
+
+  .buttons{
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    border-bottom: 2px solid rgb(255,255,255, 0.6);
+  }
+
+  .rental, .events{
+    border: none;
+    background: none;  
+    color: white; 
+    text-decoration: none;
+    font-size: 25px;
+  }
+
+  .rental{
+    border-bottom: 2px solid rgb(73, 187, 203);
+  }
+
+  .events{
+    opacity: 0.5;
+  }
+
+  .content, .content2{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 20px 20px;
+    
+  }
+
+  .locationdiv input, .dateAndTime input, .rentalSearch input, .content2 input{
+    border-radius: 5px;
+    height: 45px;
+    width: 100%;
+    padding-left: 30px;
+    margin: 5px;
+  }
+
+  .content2{
+    display: none;
+  }
+
+
+  .locationdiv{
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+  }
+
+  div.results2 {
+    position : absolute;
+    z-index : 1000;
+    top : 2em;
+    left: 35px;
+    width : 90%;
+    padding : 5px;
+    box-sizing: border-box;
+    background-color : white;
+    color : rgb(73, 187, 203);
+    border : 1px solid gray;
+    display : none;
+}
+
+div.results2 div.result2:hover {
+    background-color : rgb(73, 187, 203);;
+    color : white;
+    cursor : pointer;
+}
+
+div.results3 {
+    position : absolute;
+    z-index : 1000;
+    top : 2em;
+    left: 35px;
+    width : 90%;
+    padding : 5px;
+    box-sizing: border-box;
+    background-color : white;
+    color : rgb(73, 187, 203);
+    border : 1px solid gray;
+    display : none;
+}
+
+div.results3 div.result3:hover {
+    background-color : rgb(73, 187, 203);;
+    color : white;
+    cursor : pointer;
+}
+  
+  .navigation{
+    position: absolute;
+    padding-left: 5px;
+    margin-left: 5px;
+
+  }
+
+  .dateAndTime{
+      display: flex;
+      width: 100%;
+  }
+
+  .vehcileTypeAndCapacity{
+      display: flex;
+     
+  }
+
+  input[type=checkbox]{
+     width: 20%;
+  }
+
+  .vehicleTickBox{
+      color: white;
+  }
+
+
+  .rentalSearch input{
+    background-color: rgb(73, 187, 203);
+    border-radius: 5px;
+    
+  }
+
+/* map */
+.map{
+    width: 100vw;
+    padding-left: 20px;
+}
+
+/* modal set promo */
+.modal {
+    display: none;
+    z-index: 1000;
+    background-color: white;
+     position: fixed;
+     padding: 20px;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+    padding: 20px;
+}
+
+.topofmodal{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal2, .modal3, .modal4 {
+    display: none;
+    z-index: 1000;
+    background-color: white;
+    position: fixed;
+    padding: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+#toggleSetPromotion, #toggleAddPromotion, #toggleEditPromotion, #toggleDeletePromotion {
+    background-color: rgb(73,187,203);
+    color: white;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 23px;
+    height: 90%;
+    text-decoration: underline;
+    width: 100%;
+    text-align: center;
+    margin: 5px 0px 15px;
+}
+
+.label {
+    padding-left: 10px;
+}
+
+.formemployee input {
+    height: 40px;
+    width: 100%;
+    border-radius: 7px;
+    padding-left: 10px;
+    box-shadow: 0px 3px 3px 0 rgb(0 0 0 / 10%);
+}
+
+.submit {
+    background-color: rgb(73,187,203);
+    color: white;
+    margin-top: 10px;
+    width: 25%;
+}
+
+.heading{
+    display: flex;
+}
+#editsubmit{
+    margin-bottom: 10px;
+}
+#setsubmit{
+    margin: 15px 0px 15px;
+}
+
+/* promotion cards */
+.cardCarSet {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px 30px;
+    /* border-bottom: 1px solid rgba(133, 130, 130, 0.7); */
+    margin: 0px 5px 5px;
+    
+}
+
+.linelastevent{
+    border-bottom: 1px solid rgba(133, 130, 130, 0.7);
+    padding-bottom: 30px;
+}
+
+.cardCar {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: 20px;
+    box-shadow: 4px 7px 9px 0 rgba(0,0,0,0.4);
+    border-radius: 5px;
+    width: 300px;
+    height: 350px;
+    overflow: hidden;
+}
+
+.PromoCars, .newRentalsdiv, .newEventsdiv{
+    color: rgb(73, 187, 203);
+    text-align: center;
+    margin: 20px 5px 5px;
+    border-top: 1px solid rgba(133, 130, 130, 0.7);
+    padding-top: 20px;
+
+}
+
+ .carImg {  
+    width: 300px;
+    height: 170px;
+    border-radius: 90% / 3%;
+} 
+
+.addPromoBasket{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    z-index: 1000;
+}
+
+
+.promocardInfo{
+    text-align: center;
+    z-index: 10000;
+    height: 57%;
+}
+
+.promocardInfo1{
+    text-align: center;
+    z-index: 10000;
+}
+
+.addPromoBasket input {
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+}
+
+.category{
+    color: black;
+    margin-top: 16px;
+}
+
+.eventLocation{
+    color: rgb(73, 187, 203)
+}
+
+.promocardInfo1 a, .promocardInfo a{
+    font-size: larger;
+    color: white;
+
+}
+
+.tv {
+    background: rgb(73, 187, 203, 0.9);
+    border-radius: 50% / 10%;
+    color: white;
+    text-align: center;
+    text-indent: .1em;
+    margin-top: 5px;
+  }
+
+  #eventTv{
+    background: rgba(0,0,0,0.8);
+  }
+
+  .pricecross{
+	text-decoration: line-through;
+}
+
+.pricediv, .pricediv1{
+    display: flex;
+    justify-content: center;
+}
+
+.pricediv p{
+    margin: 20px 10px 10px;
+}
+
+.pricediv1 p{
+    margin: 15px;
+}
+
+.promoaddButton2{
+    margin-bottom: 5px;
+}
+
+.imagesuziki{
+    width: 240px;
+    height: 140px;
+}
+
+.movesuziki{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+
+.imageaudi{
+    width: 350px;
+    height: 150px;
+}
+
+.moveaudi{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.Toyota{
+	width: 265px;
+    height: 165px;
+   margin-left: 30px;
+   margin-top: 20px;
+}
+
+.Toyotamove{
+    margin-left: 20px;
+}
+
+.Jaguar{
+	height: 240px;
+    width: 340px;
+}
+
+.pricecross{
+	text-decoration: line-through;
+    color:rgb(39, 39, 39);
+}
+
+.newRentalsdiv, .newEventsdiv{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.newRentals, .newEvents{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* faq/info/subscribe */
+.FAQInfoSub{
+    display: flex;
+    width: 100%;
+}
+
+.faq, .addinfo{
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 5px;
+    width: 50%;
+    margin: 40px 20px 40px;
+}
+
+
+
+.faqTitle{
+    font-size: larger;
+    font-weight: bold;
+}
+
+.faqTitle, .sectiontitle, .sectiontitleLast{
+    padding: 0px 5px 0px;
+    margin:0px 10px 0px;
+}
+
+.sectiontitle, .faqTitle{
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    
+}
+
+.sectiontitle, .sectiontitleLast{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectiontitle button, .sectiontitleLast button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.sectioncontent p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.sectioncontent{
+    display: none;
+    padding: 10px;
+}
+
+.othercross{
+    text-decoration: line-through;
+    color:rgb(73, 187, 203, 0.9);
+}
+
+
+
+ /* media sizing */
+
+ @media (max-width: 1200px)
+{
+    .div.results2, .div.results3{
+        width: 89%;
+    }
+}
+
+@media (max-width: 700px)
+{
+    .div.results2, .div.results3{
+        width: 90%;
+    }
+}
+
+@media (max-width: 520px)
+{
+    .div.results2, .div.results3{
+        width: 85%;
+    }
+}
+
+@media (max-width: 700px)
+    {
+         .searchCarAndRental{
+            flex-direction: column;
+            gap: 30px;
+        }
+        .RentalandEvents{
+            width: 100%;
+        }
+        .map{
+            width: 100%;
+            height: 200px;
+            padding: 0;
+            margin: 0;
+        }
+        .FAQInfoSub{
+            flex-direction: column;
+        }
+        .addinfo, .faq{
+            width: 94vw;
+        }
+        
+    }

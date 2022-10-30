@@ -1,0 +1,157 @@
+main{
+    background-color: rgba(184, 199, 211, 0.322);
+}
+
+.inside{
+    margin: 20px 110px 20px;
+    gap: 10px;
+}
+
+.valuetitlediv{
+    margin: 70px 10px 110px;
+    border-radius: 10px;
+    background-color: rgba(53, 48, 48, 0.8);
+    width: 35%;
+}
+
+.imagediv{
+    position: relative;
+      width: 100%;
+      height: 55%;
+      /* margin: 20px 0; */
+      /* background: red; */
+      border-radius: 50% / 10%;
+      color: white;
+      text-align: center;
+      /* text-indent: .1em; */
+      overflow: hidden;
+      position: absolute;
+     top: 36px;
+     left: 0px;
+     /* transform: translate(-50%, -50%); */
+     z-index: -1;
+    
+}
+
+
+.valuetitlediv h1{
+    color: rgb(73, 187, 203);
+    border-bottom:3px solid white;
+    width: 100%;
+    font-size: 40px;
+    margin: 20px 0px 20px;
+    padding-left: 10px;
+}
+
+.valuesbox{
+    display: flex;
+    /* flex-direction: column; */
+    gap: 10px;
+    margin: 10px 10px 30px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+
+.section{
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    flex-direction: column;
+    margin: 10px 10px 30px;
+    padding: 10px;
+
+}
+
+.valuesinside{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    background-color: white;
+    padding: 10px;
+}
+
+.valuesinside box-icon{
+    width: 25%;
+    height: 25%;
+}
+
+.sectiontitle, .sectiontitleLast{
+    padding: 0px 5px 0px;
+    margin:0px 10px 0px;
+}
+
+.sectiontitle, .sectiontitleLast{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectiontitle button, .sectiontitleLast button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.sectioncontent p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.sectioncontent{
+    display: none;
+    padding: 10px;
+}
+
+
+@media (max-width: 1000px)
+{
+    .inside{
+        margin: 20px 40px 20px;
+    }
+    .imagediv{
+        min-width: 100%;
+    }
+}
+
+@media (max-width: 750px)
+{
+    .valuesbox{
+        flex-wrap: wrap;
+    }
+    .valuesinside{
+        flex-direction: row;
+    }
+    .valuesinside h3, .valuesinside p, .valuesinside li{
+        font-size: smaller;
+    }
+    .inside{
+        margin: 20px 20px 20px;
+    }
+    .valuetitlediv{
+        margin: 50px 10px 90px;
+    }
+}
+
+@media (max-width: 620px)
+{
+    .valuetitlediv h1{
+        font-size: 30px;
+    }
+    .inside{
+        margin: 20px 5px 20px;
+    }
+}
+
+@media (max-width: 450px){
+    .valuetitlediv{
+        margin: 50px 10px 40px;
+    }
+    .valuetitlediv h1{
+        font-size: 25px;
+    }
+
+}

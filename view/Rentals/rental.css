@@ -1,0 +1,576 @@
+
+* {box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+	
+	
+/* layout */
+body{
+	margin: 0;
+	min-height: 100vh;
+	display:flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+/* modal add */
+
+.topmodal{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.modal {
+	display: none;
+    z-index: 1000;
+	position: fixed;
+	width: 30%; 
+	background-color: #fefefe;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 20px;
+    border: 1px solid black;
+
+  }
+
+  .field input, .field select{
+	  width: 100%;
+  }
+
+.btnModal {
+	display: none; 
+	z-index: 1; 
+	left: 25%;
+	top: 10%;
+	width: 50%; 
+	height: 100%;
+	margin-top: 10px;
+
+}
+
+.field{
+	display: flex;
+	flex-direction: column;
+	height: 50px;
+	justify-content: space-between;
+}
+
+
+#submitBtn, #submitEditBtn {
+	background: rgb(73, 187, 203);
+	color: white;
+	width: 100%;
+	height: 35px;
+
+}
+
+#submitDelBtn {
+	background: rgb(73, 187, 203);
+	color: white;
+	width: 100%;
+	height: 35px;
+}
+
+
+#myBtn, #editBtn, #delBtn{
+	background: rgb(73, 187, 203);
+	color: white;
+	margin: 5px;
+
+}
+
+.controllerRentalButton{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.newVehicle p, .editVehicle p {
+	font-weight: bold;
+	color:rgb(73, 187, 203);
+	margin-bottom: -10px;
+}
+
+.deleteVehicle p {
+	font-weight: bold;
+	color:rgb(73, 187, 203);
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+  }
+
+.close:hover, 
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* main */
+.main{
+	display: flex;
+	margin: 50px;
+	justify-content: center;
+	gap: 40px;
+}
+
+.makevehicles{
+	color: black;
+}
+
+.filterbox{
+	width: 100%;
+	border: 2px solid black;
+	padding: 20px;
+	/* margin-top: 30px; */
+	height: 50%;
+	max-width: 300px;
+}
+
+.filterbox h2{
+	margin: 0px;
+	/* border: 2px solid black; */
+}
+
+.filterbox form{
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+}
+
+.filterbox p{
+	margin-top: 10px;
+	padding: 10px 0px 0px;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	font-weight: bold;
+}
+
+.filterbox .filter{
+	display: flex;
+}
+
+.filterandcars{
+	display: flex;
+	flex-direction: column;
+	/* border: 2px solid black; */
+	background-color: white;
+}
+
+.topfilter{
+	padding: 0px 10px 10px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.topfilter p{
+	margin: 0px;
+}
+
+.topfilter .num{
+	display: flex;
+	gap: 5px;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+.filtertop{
+	display: flex;
+}
+
+
+.titlerentals{
+	color: black;
+	font-weight: bold;
+	font-size: larger;
+}
+
+#resetbutton, #filterbutton{
+	margin: 25px;
+}
+
+.filterbuttons{
+	display: flex;
+}
+
+.filterbuttons input{
+	width: 50%;
+	background-color: rgba(133, 215, 226, 0.7);
+}
+
+/* promotion cards */
+.carboxes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* justify-content: center; */
+    padding: 5px 10px 30px;
+    /* border-bottom: 1px solid rgba(133, 130, 130, 0.7); */
+    margin: 0px 5px 5px;
+	/* border: 2px solid red; */
+	background-color: rgba(210, 220, 230, 0.24);
+    
+}
+
+.info{
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+}
+
+.info2, .info1{
+	display: flex;
+	flex-direction: column;
+}
+
+.info2 p, .info1 p{
+	margin: 5px;
+	padding: 0px;
+	font-size: smaller;
+}
+
+.cardCar {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    margin: 30px 70px 30px;
+    box-shadow: 4px 7px 9px 0 rgba(0,0,0,0.4);
+    border-radius: 5px;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+	background-color: white;
+}
+
+.promoImagediv{
+	display: flex;
+	align-items: center;
+	width: 50%;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+.carImg {  
+	width: 350px;
+	height: 270px;
+	border-radius: 90% / 3%;
+} 
+
+
+.promocardInfo{
+    text-align: center;
+    z-index: 10000;
+	padding-top: 5px;
+}
+
+.addPromoBasket{
+    display:flex;
+    justify-content: center;
+    margin-bottom: 35px;
+    z-index: 1000;
+}
+
+.addPromoBasket input {
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+}
+
+
+.promocardInfo a{
+	padding-top: 10px;
+	color: black;
+    margin-top: 16px;
+	font-size: 16px;
+}
+
+.tv {
+	background: rgb(73, 187, 203, 0.9);
+	border-radius: 50% / 10%;
+	color: white;
+	text-align: center;
+	text-indent: .1em;
+	margin-top: 5px;
+	padding: 5px;
+    height: 270px;
+	width: 45%;
+}
+
+.pricediv{
+    display: flex;
+    justify-content: center;
+	gap: 5px;
+	/* margin-bottom: 9px; */
+}
+
+.pricediv p{
+	margin-top: 0px;
+}
+
+.numofpassengers{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.imagesuziki{
+    width: 270px;
+    height: 200px;
+}
+
+.imageaudi{
+    width: 400px;
+    height: 180px;
+}
+
+.movesuziki{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 27px;
+    margin-top: 10px;
+	/* margin-left: 35px; */
+	align-items: center;
+}
+
+.moveaudi{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.pricecross{
+	text-decoration: line-through;
+    color:rgb(39, 39, 39);
+}
+
+.box{
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	border: 1px solid #f56700;
+	background-color: #fef3ec;
+	margin: 0px 0px 10px;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+.mini{
+	width: 120px;
+	height: 145px;
+	box-shadow: 4px 7px 9px 0 rgba(0,0,0,0.4);
+	background-color: rgba(19, 131, 146, 0.7);
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	padding: 5px 0px 10px;
+	overflow: hidden;
+}
+
+.carpopular{
+	width: 110px;
+	height: 80px;
+}
+
+.minicars p{
+	color: white;
+}
+
+.minicars h3{
+	margin: 0px 0px 15px;
+	font-weight: bold;
+}
+
+.minicarsdiv{
+	display: flex;
+	gap: 15px;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	padding-bottom: 20px;
+	flex-wrap: wrap;
+}
+
+.minicarsandbox{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.filtertop{
+	justify-content: space-between;
+}
+.filterbig{
+	flex-direction: column;
+}
+
+.miniaudi{
+	width: 150px;
+}
+
+.Toyota{
+	width: 265px;
+    height: 165px;
+   margin-left: 30px;
+   margin-top: 20px;
+}
+
+.Jaguar{
+	height: 240px;
+    width: 340px;
+}
+
+@media (max-width: 1100px)
+{
+	.filterbig{
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.filterbox{
+		max-width: 500px;
+	}
+	.filter{
+		flex-direction: row;
+	}
+	.formone{
+		gap: 10px;
+		margin-bottom: 5px;
+	}
+	.main{
+		gap: 20px;
+		flex-direction: column;
+	}
+
+	.filterbox form{
+		flex-direction:row;
+	}
+
+	.filterbox p{
+		border: 0px solid;
+		padding: 0px;
+		margin: 0px;
+		flex-wrap: wrap;
+	}
+	#filterbutton, #resetbutton{
+		margin: 0px;
+		width: 80%;
+	}
+	.filterbuttons{
+		flex-direction: column;
+		width: 50%;
+	}
+	.filterbox form{
+		flex-wrap: wrap;
+	}
+}
+@media (max-width: 900px)
+{
+	.info1 p, .info p{
+		margin: 2px;
+	}
+	.cardCar {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: column;
+		margin: 20px;
+		box-shadow: 4px 7px 9px 0 rgba(0,0,0,0.4);
+		border-radius: 5px;
+		width: 300px;
+		height: 350px;
+		overflow: hidden;
+		min-width: 300px;
+	}
+	.carImg {  
+		width: 300px;
+		height: 170px;
+		border-radius: 90% / 3%;
+	} 
+	
+	.addPromoBasket{
+		display:flex;
+		justify-content: center;
+		margin-top: 25px;
+		z-index: 1000;
+	}
+	
+	
+	.promocardInfo{
+		text-align: center;
+		z-index: 10000;
+		height: 57%;
+	}
+	
+	.tv {
+		width: 300px;
+		height: 210px;
+	}
+	.cardCar{
+		justify-content: center;
+		align-items: center;
+	}
+	.imagesuziki{
+		width: 240px;
+		height: 130px;
+		margin-bottom: 20px;
+		margin-top: 20px;
+	}
+	.movesuziki{
+		margin-bottom: 0px;
+	}
+	.promocardInfo{
+		font-size: 13px;
+	}
+	.pricediv p{
+		margin: 0px;
+	}
+	.imageaudi{
+		width: 270px;
+		height: 125px;
+	}
+	.topfilter p{
+		font-size: smaller;
+	}
+	.moveaudi{
+		margin-bottom: 20px;
+		margin-top: 25px;
+	}
+}
+
+@media (max-width: 490px)
+{
+	.filterbar{
+		width: 30%;
+	}
+	.main{
+		margin: 10px;
+	}
+	.carboxes{
+		padding: 0px;
+		justify-content: center;
+	}
+	.filterbox{
+		max-width: 350px;
+	}
+	.filterbig{
+		flex-wrap: wrap;
+	}
+
+}
+
+
+
+
+

@@ -1,0 +1,328 @@
+
+* {box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+	}
+		
+/* layout */
+body{
+	margin: 0;
+	min-height: 100vh;
+	display:flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+main{
+	background-color: rgba(173, 201, 201, 0.123); 
+}
+
+.shoppingall{
+	display: flex;
+	margin: 40px;
+	gap: 30px;
+}
+
+.shoppingcart{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	background-color: white;
+	width: 3400px;
+}
+
+.shoppingcart h1{
+	/* color:rgb(73, 187, 203); */
+	margin: 0px 20px 0px;
+	padding: 20px 10px 0px;
+	width: 25%;
+	border-bottom: 2px solid rgb(73, 187, 203);
+}
+
+.basketcontainer{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: 100%;
+	/* background-color: rgba(173, 201, 201, 0.144); */
+	background-color: white;
+	margin-top: 15px;
+	
+}
+
+.item{
+	display: flex;
+	justify-content: center;	
+	align-items: center;
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+	padding: 20px 10px 20px;
+	margin: 0px 20px 0px;
+	gap: 10px;
+}
+
+
+.vehicleinfo{
+	display: flex;
+	flex-direction: column;
+}
+
+.rgyear{
+	display: flex;
+	gap: 20px;
+}
+
+.tmc{
+	display: flex;
+	gap: 20px;
+}
+
+.startandend{
+	display: flex;
+	gap: 20px;
+}
+
+.nameanddes{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.priceinfodiv{
+	display: flex;
+	width:45%;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+.checkout{
+	display: flex;
+	flex-direction: column;
+	width: 75%;
+	height: 100%;
+	margin-top: 50px;
+	padding: 10px;
+	box-shadow: 4px 7px 9px 0 rgb(0 0 0 / 20%);
+	background-color: white;
+}
+
+.initial2{
+	margin-left: 30px;
+}
+
+.initial{
+	width: 300px;
+}
+
+.checkout input{
+	border-radius: 5px;
+	height: 30px;
+	width: 100%;
+}
+
+.line{
+	border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+.total{
+	display: flex;
+	justify-content: space-between;
+	border-top: 1px solid rgba(0,0,0,0.2);
+	border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.checkoutbut{
+	width: 100%;
+}
+
+.checkoutbutbut{
+	margin-top: 20px;
+	width: 100%;
+	border-radius: 5px;
+	height: 30px;
+	background-color: rgb(73, 187, 203);
+	color: white;
+}
+
+
+.sectiontitle{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectiontitle button{
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.sectioncontent p{
+    padding: 0px;
+    margin: 0px;
+}
+
+.sectioncontent{
+    padding: 10px;
+	gap: 5px;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.carImg{
+	width: 20%;
+	height: 20%;
+}
+
+.pricecross{
+	text-decoration: line-through;
+    color:rgb(39, 39, 39);
+}
+
+.vehicleinfo{
+	width: 100%;
+}
+
+.item p{
+	margin: 5px;
+}
+
+.start, .end{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.nameandlocat{
+	display: flex;
+	gap: 20px;
+}
+
+.initial{
+	display: flex;
+	flex-direction: column;
+}
+
+.totalwanttobook p{
+	margin: 5px;
+}
+
+.carttitle{
+	text-align: end;
+	font-size: smaller;
+	font-weight: lighter;
+	color:rgb(73, 187, 203)
+}
+
+.size{
+	padding:0px 20px 0px;
+	margin-bottom: 0px;
+	margin-top: 8px;
+}
+
+.addressdiv{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.cityandpostcode{
+	display: flex;
+	gap: 5px;
+	width: 100%;
+}
+
+.citydiv, .postcodediv{
+	display: flex; 
+	flex-direction: column;
+	width: 50%;
+}
+
+.namediv{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.cardnodiv{
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.expandccv{
+	display: flex;
+	gap: 5px;
+	width: 100%;
+}
+
+.expdiv, .ccvdiv{
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.popup, .popup2{
+    background-color: white;
+    box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.4);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100000000000000;
+    align-items: center;
+}
+
+
+.closepopup, .closepopup2{
+    padding: 0;
+    border: none;
+    background: none;
+    position: absolute;
+    right: 0px;
+}
+
+
+
+@media (max-width: 1100px)
+{
+	.shoppingall{
+		flex-direction: column;
+	}
+	.checkout{
+		width: 100%;
+	}
+	.shoppingcart{
+		width: 100%;
+	}
+
+	
+
+}
+
+@media (max-width: 570px)
+{
+	.basketcontainer p{
+		font-size: smaller;
+	}
+	.shoppingall{
+		margin:10px;
+	}
+	.initial,.tmc,.rgyear,.desp{
+		display: none;
+	}
+	.nameandlocat,.startandend{
+		flex-direction: column;
+	}
+	.item{
+		justify-content: space-between;
+	}
+
+	
+}
+
+
+

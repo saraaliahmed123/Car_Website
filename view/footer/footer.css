@@ -1,0 +1,62 @@
+
+/* footer */
+
+.Footer{
+    background-color: rgb(54, 54, 54);
+    display: flex;
+    justify-content:space-evenly;
+    flex-direction: column;
+    
+}
+
+.FooterElements {
+    display: flex;
+    justify-content:space-evenly;
+    
+}
+
+.FooterCategory
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.FooterItems, .FooterTitle, #CopyrightNotice {
+    text-decoration: none;
+    text-align: left;
+    padding: 1px;
+    color: white;
+}
+
+.FooterTitle:hover{
+    text-decoration: underline;
+}
+
+.FooterTitle {
+    font-weight: bold;
+    
+}
+
+#CopyrightNotice {
+    text-align: center;
+    font-size: 10px;
+}
+
+.FooterTitle{
+    height: 25px;
+    font-size: 14px;
+}
+
+.FooterItems{
+    font-size: 10px;
+}
+.Rentalbutton{
+    padding-top: 10px;
+}
+
+@media (max-width: 650px)
+    {
+        .FooterItems{
+            display: none;
+        }
+    } 
