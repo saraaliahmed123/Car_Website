@@ -14,9 +14,9 @@ class Promotion implements JsonSerializable {
         $this->$name = $value;
     }
 
-    public function jsonSerialize()
+    public function jsonSerialize(): mixed 
     {
         return get_object_vars($this);
     }
 
-}?>
+}

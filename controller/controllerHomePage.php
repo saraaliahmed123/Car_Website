@@ -117,6 +117,3 @@ if (isset($_REQUEST["submitDelete"]) && isset($_REQUEST["promotionDelete"]))
 
 
 require_once("../view/HomePage/homepagehtml.php");
-
-
-?>
